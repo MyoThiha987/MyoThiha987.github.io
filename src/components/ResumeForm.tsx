@@ -588,59 +588,7 @@ export default function ResumeForm({ data, onChange }: ResumeFormProps) {
         </div>
       )}
 
-      {/* Community Section */}
-      {activeSection === "community" && (
-        <div className="space-y-6">
-          {data.communityContributions.map((contribution: any, index: number) => (
-            <div key={index} className="p-4 border border-border rounded-lg relative">
-              <button
-                onClick={() => removeCommunity(index)}
-                className="absolute top-4 right-4 p-1 text-red-500 hover:bg-red-50 rounded"
-              >
-                <Trash size={16} />
-              </button>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium mb-1">Event</label>
-                  <input
-                    type="text"
-                    value={contribution.event}
-                    onChange={(e) => updateCommunity(index, "event", e.target.value)}
-                    className="w-full p-2 rounded-md border border-border bg-background"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-1">Organization</label>
-                  <input
-                    type="text"
-                    value={contribution.organization}
-                    onChange={(e) => updateCommunity(index, "organization", e.target.value)}
-                    className="w-full p-2 rounded-md border border-border bg-background"
-                  />
-                </div>
-                <div className="md:col-span-2">
-                  <label className="block text-sm font-medium mb-1">Topic</label>
-                  <input
-                    type="text"
-                    value={contribution.topic}
-                    onChange={(e) => updateCommunity(index, "topic", e.target.value)}
-                    className="w-full p-2 rounded-md border border-border bg-background"
-                  />
-                </div>
-              </div>
-            </div>
-          ))}
-          <button
-            onClick={addCommunity}
-            className="flex items-center gap-2 px-4 py-2 text-sm border border-dashed border-border rounded-lg hover:bg-accent"
-          >
-            <Plus size={16} />
-            Add Community Contribution
-          </button>
-        </div>
-      )}
-
-      {/* Certificates Section */}
+    {/* Certificates Section */}
       {activeSection === "certificates" && (
         <div className="space-y-6">
           {data.certificates.map((cert: any, index: number) => (

@@ -41,7 +41,6 @@ export default function Preview({ data }: PreviewProps) {
     personalInfo: data.personalInfo || {},
     experience: data.experience || [],
     projects: data.projects || [],
-    communityContributions: data.communityContributions || [],
     certificates: data.certificates || [],
     skills: data.skills || {
       languages: [],
