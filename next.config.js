@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/Profile',
-  assetPrefix: '/Profile/',
+  basePath: '/MyoThiha987.github.io',
+  reactStrictMode: true,
+  //assetPrefix: '/MyoThiha987.github.io/',
   images: {
     remotePatterns: [
       {
