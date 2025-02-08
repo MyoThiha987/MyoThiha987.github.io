@@ -4,7 +4,6 @@ import Hero from "./Hero";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Skills from "./Skills";
-import Speaking from "./Speaking";
 import Certificates from "./Certificates";
 import { ResumeContext } from "@/context/ResumeContext";
 import { motion } from "framer-motion";
@@ -77,10 +76,7 @@ export default function Preview({ data }: PreviewProps) {
             <Skills />
           </motion.div>
 
-          <motion.div variants={fadeInUp}>
-            <Speaking />
-          </motion.div>
-
+      
           <motion.div variants={fadeInUp}>
             <Certificates />
           </motion.div>
